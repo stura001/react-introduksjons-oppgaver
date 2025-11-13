@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# React Læringsprosjekt 📚
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Velkommen til dette React-prosjektet! Dette prosjektet tar deg gjennom **grunnleggende React-konsepter** ved å la deg bygge små komponenter, bruke props og state, rendere lister med `.map()`, bruke `useEffect`, og til slutt lage en **Counter App med 4 separate tellere**.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Hva du lærer
 
-### `npm start`
+I dette prosjektet vil du lære:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. **Funksjonelle komponenter**
+2. **Props**
+3. **Lister og `.map()`**
+4. **useState**
+5. **useEffect**
+6. **Hovedprosjekt: Counter App**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Oppgavebeskrivelse
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Se kommentarene og TODO-plassene i `App.jsx`. Følg steg-for-steg instruksjoner:
 
-### `npm run build`
+- Funksjonelle komponenter → Props → Lister → useState → useEffect → Counter App
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Refleksjonsspørsmål og hints finnes i filen.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Refleksjonsspørsmål
 
-### `npm run eject`
+1. Hvorfor er det smart å dele UI opp i komponenter?
+2. Hva er forskjellen mellom props og state?
+3. Når ville du brukt useEffect i et ekte prosjekt?
+4. Hvordan kan du utvide counter-appen med en "decrease"-knapp?
+5. Hva skjer hvis du flytter useState UTENFOR komponenten?
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Tips
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Ikke se på løsningen! Fyll ut TODO-plassene selv.
+- Bruk konsollen i nettleseren for å debugge og observere state-endringer.
+- Husk å bruke unik `key` når du rendre lister med `.map()`.
+- Eksperimenter med styling og ekstra funksjoner når du er ferdig!
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## Hvordan kjøre prosjektet
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. **Hent prosjektet fra GitHub**  
+   Åpne terminal og naviger dit du ønsker å ha oppgaven, deretter kjør:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+git clone https://github.com/akselkirk/react-introduksjons-oppgaver.git
+cd react-introduksjons-oppgaver
+npm install
+npm start
+```
