@@ -52,7 +52,16 @@ function Hilsen({ navn }) {
 // - Bruk <h4> for tittel, <p> for beskrivelse
 // - Gi div litt padding og bakgrunnsfarge
 function InfoKort({ tittel, beskrivelse }) {
-  return null; // TODO: fyll inn JSX her
+  return (
+    <div
+    style={{
+      padding: "5vw",
+      backgroundColor: "lightblue",
+    }}>
+    <h4>{tittel} </h4>
+    <p>{beskrivelse}</p>
+    </div>
+  ); // TODO: fyll inn JSX her
 }
 
 // ============================================
@@ -92,10 +101,19 @@ function HobbyListe() {
 // bonus: hvis du ønsker kan du forsøke å lage liste objectet til et kort
 //        som har en bakgrunnsfarge, en tittel og kanskje et bilde.
 //        (du bestemmer hvor mye du gjør ut av det)
-const mineFavoritter = []; // TODO: fyll inn favoritter
+const mineFavoritter = ["Nine Sols", "Darkest Dungeon", "Hades", "Cyberpunk 2077"]; // TODO: fyll inn favoritter
 
 function FavorittListe() {
-  return null; // TODO: fyll inn JSX her
+  return (
+        <div>
+      <h3>Mine favorittspill:</h3>
+      <ul>
+        {mineFavoritter.map((spill, index) => (
+          <li key={index}>{spill}</li>
+        ))}
+      </ul>
+    </div>
+  );// TODO: fyll inn JSX her
 }
 
 // REFLEKSJON:
@@ -137,7 +155,23 @@ function EnkelTeller() {
 // - Vis div med bakgrunnsfarge basert på state
 // - Knapp som bytter farge
 function FargeBytter() {
-  return null; // TODO: bruk useState og fyll inn JSX
+  const [teller, setTeller] = useState(0);
+  const farge = teller % 2 === 0 ? "blue" : "red";
+  return (
+    <div
+      style={{
+        padding: "15px",
+        border: "2px solid #4caf50",
+        borderRadius: "8px",
+        margin: "10px 0",
+        backgroundColor: farge,
+      }}
+    >
+      <h4>Min første teller</h4>
+      <p style={{ fontSize: "24px", fontWeight: "bold" }}>Antall: {teller}, Farge: {farge}</p>
+      <button style={{backgroundColor: farge}} onClick={() => setTeller(teller + 1)}>Klikk meg! ➕</button>
+    </div>
+  ); // TODO: bruk useState og fyll inn JSX
 }
 
 // REFLEKSJON:
@@ -217,18 +251,21 @@ function App() {
         <Velkommen />
         <Hilsen navn="Alle sammen" />
         <Hilsen navn="Elever" />
+        <InfoKort />
         {/* TODO: Bruk InfoKort-komponenten */}
       </section>
 
       {/* DEL 3 */}
       <section style={{ marginBottom: "30px" }}>
         <HobbyListe />
+        <FavorittListe />
         {/* TODO: Bruk FavorittListe-komponenten */}
       </section>
 
       {/* DEL 4 */}
       <section style={{ marginBottom: "30px" }}>
         <EnkelTeller />
+        <FargeBytter />
         {/* TODO: Bruk FargeBytter-komponenten */}
       </section>
 
